@@ -1,9 +1,9 @@
 import React from 'react'
-import Hero from '../Componets/Hero';
-import Service from '../Componets/Service';
-import Collections from '../Componets/Collections';
-import Products from '../Componets/Products';
-import BigSale from '../Componets/BigSale';
+import Hero from '../Components/Hero';
+import Service from '../Components/Service';
+import Collections  from '../Components/Collections';
+import Products from '../Components/Products';
+import BigSale from '../Components/BigSale';
 
 const HomePage = () => {
     return (

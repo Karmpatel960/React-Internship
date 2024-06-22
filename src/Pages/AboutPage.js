@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Service from '../Componets/Service';
+import Service from '../Components/Service';
 
 const AboutPage = () => {
     return (
