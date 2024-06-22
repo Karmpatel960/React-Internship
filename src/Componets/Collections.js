@@ -13,7 +13,7 @@ const Collections = () => {
                         <div className="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" >
                             <Link className="block-2-item" to="/">
                                 <figure className="image">
-                                    <img src={Img1} alt="" className="img-fluid" />
+                                    <img src={Img1} alt="Women's collection" className="img-fluid" />
                                 </figure>
                                 <div className="text">
                                     <span className="text-uppercase">Collections</span>
@@ -24,7 +24,7 @@ const Collections = () => {
                         <div className="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" >
                             <Link className="block-2-item" to="/">
                                 <figure className="image">
-                                    <img src={Img2} alt="" className="img-fluid" />
+                                    <img src={Img2} alt="Children's collection" className="img-fluid" />
                                 </figure>
                                 <div className="text">
                                     <span className="text-uppercase">Collections</span>
@@ -35,7 +35,7 @@ const Collections = () => {
                         <div className="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" >
                             <Link className="block-2-item" to="/">
                                 <figure className="image">
-                                    <img src={Img3} alt="" className="img-fluid" />
+                                    <img src={Img3} alt="Men's collection" className="img-fluid" />
                                 </figure>
                                 <div className="text">
                                     <span className="text-uppercase">Collections</span>
@@ -49,4 +49,5 @@ const Collections = () => {
         </>
     )
 }
+
 export default Collections;

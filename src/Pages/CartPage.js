@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const CartPage = () => {
@@ -17,16 +17,21 @@ const CartPage = () => {
         setCount2(count2 + 1);
     };
     const decrement2 = () => {
-        if (count > 0) {
+        if (count2 > 0) {
             setCount2(count2 - 1);
         }
     };
+
     return (
         <>
             <div className="bg-light py-3">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12 mb-0"><Link to="/home">Home</Link> <span className="mx-2 mb-0">/</span> <strong className="text-black">Cart</strong></div>
+                        <div className="col-md-12 mb-0">
+                            <Link to="/home">Home</Link> 
+                            <span className="mx-2 mb-0">/</span> 
+                            <strong className="text-black">Cart</strong>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,7 +54,7 @@ const CartPage = () => {
                                     <tbody>
                                         <tr>
                                             <td className="product-thumbnail">
-                                                <img src="images/cloth_1.jpg" alt="Image" className="img-fluid" />
+                                                <img src="images/cloth_1.jpg" alt="Top Up T-Shirt" className="img-fluid" />
                                             </td>
                                             <td className="product-name">
                                                 <h2 className="h5 text-black">Top Up T-Shirt</h2>
@@ -65,15 +70,16 @@ const CartPage = () => {
                                                         <button className="btn btn-outline-primary js-btn-plus" type="button" onClick={increment}>+</button>
                                                     </div>
                                                 </div>
-
                                             </td>
                                             <td>$49.00</td>
-                                            <td><Link to="/cart" className="btn btn-primary btn-sm">X</Link></td>
+                                            <td>
+                                                <Link to="/cart" className="btn btn-primary btn-sm">X</Link>
+                                            </td>
                                         </tr>
 
                                         <tr>
                                             <td className="product-thumbnail">
-                                                <img src="images/cloth_2.jpg" alt="Image" className="img-fluid" />
+                                                <img src="images/cloth_2.jpg" alt="Polo Shirt" className="img-fluid" />
                                             </td>
                                             <td className="product-name">
                                                 <h2 className="h5 text-black">Polo Shirt</h2>
@@ -89,10 +95,11 @@ const CartPage = () => {
                                                         <button className="btn btn-outline-primary js-btn-plus" type="button" onClick={increment2}>+</button>
                                                     </div>
                                                 </div>
-
                                             </td>
                                             <td>$49.00</td>
-                                            <td><Link to="/cart" className="btn btn-primary btn-sm">X</Link></td>
+                                            <td>
+                                                <Link to="/cart" className="btn btn-primary btn-sm">X</Link>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -112,7 +119,7 @@ const CartPage = () => {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <label className="text-black h4" for="coupon">Coupon</label>
+                                    <label className="text-black h4" htmlFor="coupon">Coupon</label>
                                     <p>Enter your coupon code if you have one.</p>
                                 </div>
                                 <div className="col-md-8 mb-3 mb-md-0">
@@ -150,7 +157,7 @@ const CartPage = () => {
 
                                     <div className="row">
                                         <div className="col-md-12">
-                                            <button className="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='checkout.html'">Proceed To Checkout</button>
+                                            <button className="btn btn-primary btn-lg py-3 btn-block" onClick={() => window.location.href = 'checkout.html'}>Proceed To Checkout</button>
                                         </div>
                                     </div>
                                 </div>

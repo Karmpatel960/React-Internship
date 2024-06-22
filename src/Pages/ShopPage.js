@@ -1,5 +1,5 @@
-import React from 'react'
-import Collections from '../Componets/Collections';
+import React from 'react';
+import Collections from '../Components/Collections';
 import { Link } from 'react-router-dom';
 
 const ShopPage = () => {
@@ -8,7 +8,9 @@ const ShopPage = () => {
             <div className="bg-light py-3">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12 mb-0"><Link to="/home">Home</Link> <span className="mx-2 mb-0">/</span> <strong className="text-black">Shop</strong></div>
+                        <div className="col-md-12 mb-0">
+                            <Link to="/home">Home</Link> <span className="mx-2 mb-0">/</span> <strong className="text-black">Shop</strong>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -16,7 +18,9 @@ const ShopPage = () => {
                 <div className="col-md-9 order-2">
                     <div className="row">
                         <div className="col-md-12 mb-5">
-                            <div className="float-md-left mb-4"><h2 className="text-black h5">Shop All</h2></div>
+                            <div className="float-md-left mb-4">
+                                <h2 className="text-black h5">Shop All</h2>
+                            </div>
                             <div className="d-flex">
                                 <div className="dropdown mr-1 ml-md-auto">
                                     <button type="button" className="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,78 +47,31 @@ const ShopPage = () => {
                         </div>
                     </div>
                     <div className="row mb-5">
-                        <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                            <div className="block-4 text-center border">
-                                <figure className="block-4-image">
-                                    <Link to="shop-single.html"><img src="images/cloth_1.jpg" alt="Image placeholder" className="img-fluid" /></Link>
-                                </figure>
-                                <div className="block-4-text p-4">
-                                    <h3><Link to="shop-single.html">Tank Top</Link></h3>
-                                    <p className="mb-0">Finding perfect t-shirt</p>
-                                    <p className="text-primary font-weight-bold">$50</p>
+                        {[
+                            { img: 'cloth_1.jpg', title: 'Tank Top', desc: 'Finding perfect t-shirt', price: '$50' },
+                            { img: 'shoe_1.jpg', title: 'Corater', desc: 'Finding perfect products', price: '$50' },
+                            { img: 'cloth_2.jpg', title: 'Polo Shirt', desc: 'Finding perfect products', price: '$50' },
+                            { img: 'cloth_3.jpg', title: 'T-Shirt Mockup', desc: 'Finding perfect products', price: '$50' },
+                            { img: 'shoe_1.jpg', title: 'Corater', desc: 'Finding perfect products', price: '$50' },
+                            { img: 'cloth_1.jpg', title: 'Tank Top', desc: 'Finding perfect t-shirt', price: '$50' },
+                        ].map((item, index) => (
+                            <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" key={index}>
+                                <div className="block-4 text-center border">
+                                    <figure className="block-4-image">
+                                        <Link to="shop-single.html">
+                                            <img src={`images/${item.img}`} alt="Image placeholder" className="img-fluid" />
+                                        </Link>
+                                    </figure>
+                                    <div className="block-4-text p-4">
+                                        <h3>
+                                            <Link to="shop-single.html">{item.title}</Link>
+                                        </h3>
+                                        <p className="mb-0">{item.desc}</p>
+                                        <p className="text-primary font-weight-bold">{item.price}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                            <div className="block-4 text-center border">
-                                <figure className="block-4-image">
-                                    <Link to="shop-single.html"><img src="images/shoe_1.jpg" alt="Image placeholder" className="img-fluid" /></Link>
-                                </figure>
-                                <div className="block-4-text p-4">
-                                    <h3><Link to="shop-single.html">Corater</Link></h3>
-                                    <p className="mb-0">Finding perfect products</p>
-                                    <p className="text-primary font-weight-bold">$50</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                            <div className="block-4 text-center border">
-                                <figure className="block-4-image">
-                                    <Link to="shop-single.html"><img src="images/cloth_2.jpg" alt="Image placeholder" className="img-fluid" /></Link>
-                                </figure>
-                                <div className="block-4-text p-4">
-                                    <h3><Link to="shop-single.html">Polo Shirt</Link></h3>
-                                    <p className="mb-0">Finding perfect products</p>
-                                    <p className="text-primary font-weight-bold">$50</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                            <div className="block-4 text-center border">
-                                <figure className="block-4-image">
-                                    <Link to="shop-single.html"><img src="images/cloth_3.jpg" alt="Image placeholder" className="img-fluid" /></Link>
-                                </figure>
-                                <div className="block-4-text p-4">
-                                    <h3><Link to="shop-single.html">T-Shirt Mockup</Link></h3>
-                                    <p className="mb-0">Finding perfect products</p>
-                                    <p className="text-primary font-weight-bold">$50</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                            <div className="block-4 text-center border">
-                                <figure className="block-4-image">
-                                    <Link to="shop-single.html"><img src="images/shoe_1.jpg" alt="Image placeholder" className="img-fluid" /></Link>
-                                </figure>
-                                <div className="block-4-text p-4">
-                                    <h3><Link to="shop-single.html">Corater</Link></h3>
-                                    <p className="mb-0">Finding perfect products</p>
-                                    <p className="text-primary font-weight-bold">$50</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                            <div className="block-4 text-center border">
-                                <figure className="block-4-image">
-                                    <Link to="shop-single.html"><img src="images/cloth_1.jpg" alt="Image placeholder" className="img-fluid" /></Link>
-                                </figure>
-                                <div className="block-4-text p-4">
-                                    <h3><Link to="shop-single.html">Tank Top</Link></h3>
-                                    <p className="mb-0">Finding perfect t-shirt</p>
-                                    <p className="text-primary font-weight-bold">$50</p>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                     <div className="row" data-aos="fade-up">
                         <div className="col-md-12 text-center">
@@ -136,9 +93,21 @@ const ShopPage = () => {
                     <div className="border p-4 rounded mb-4">
                         <h3 className="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
                         <ul className="list-unstyled mb-0">
-                            <li className="mb-1"><Link to="/shop" className="d-flex"><span>Men</span> <span className="text-black ml-auto">(2,220)</span></Link></li>
-                            <li className="mb-1"><Link to="/shop" className="d-flex"><span>Women</span> <span className="text-black ml-auto">(2,550)</span></Link></li>
-                            <li className="mb-1"><Link to="/shop" className="d-flex"><span>Children</span> <span className="text-black ml-auto">(2,124)</span></Link></li>
+                            <li className="mb-1">
+                                <Link to="/shop" className="d-flex">
+                                    <span>Men</span> <span className="text-black ml-auto">(2,220)</span>
+                                </Link>
+                            </li>
+                            <li className="mb-1">
+                                <Link to="/shop" className="d-flex">
+                                    <span>Women</span> <span className="text-black ml-auto">(2,550)</span>
+                                </Link>
+                            </li>
+                            <li className="mb-1">
+                                <Link to="/shop" className="d-flex">
+                                    <span>Children</span> <span className="text-black ml-auto">(2,124)</span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -149,33 +118,32 @@ const ShopPage = () => {
 
                         <div className="mb-4">
                             <h3 className="mb-3 h6 text-uppercase text-black d-block">Size</h3>
-                            <label for="s_sm" className="d-flex">
+                            <label htmlFor="s_sm" className="d-flex">
                                 <input type="checkbox" id="s_sm" className="mr-2 mt-1" /> <span className="text-black">Small (2,319)</span>
                             </label>
-                            <label for="s_md" className="d-flex">
+                            <label htmlFor="s_md" className="d-flex">
                                 <input type="checkbox" id="s_md" className="mr-2 mt-1" /> <span className="text-black">Medium (1,282)</span>
                             </label>
-                            <label for="s_lg" className="d-flex">
+                            <label htmlFor="s_lg" className="d-flex">
                                 <input type="checkbox" id="s_lg" className="mr-2 mt-1" /> <span className="text-black">Large (1,392)</span>
                             </label>
                         </div>
 
                         <div className="mb-4">
                             <h3 className="mb-3 h6 text-uppercase text-black d-block">Color</h3>
-                            <Link to="/shop" className="d-flex color-item align-items-center" >
+                            <Link to="/shop" className="d-flex color-item align-items-center">
                                 <span className="bg-danger color d-inline-block rounded-circle mr-2"></span> <span className="text-black">Red (2,429)</span>
                             </Link>
-                            <Link to="/shop" className="d-flex color-item align-items-center" >
+                            <Link to="/shop" className="d-flex color-item align-items-center">
                                 <span className="bg-success color d-inline-block rounded-circle mr-2"></span> <span className="text-black">Green (2,298)</span>
                             </Link>
-                            <Link to="/shop" className="d-flex color-item align-items-center" >
+                            <Link to="/shop" className="d-flex color-item align-items-center">
                                 <span className="bg-info color d-inline-block rounded-circle mr-2"></span> <span className="text-black">Blue (1,075)</span>
                             </Link>
-                            <Link to="/shop" className="d-flex color-item align-items-center" >
+                            <Link to="/shop" className="d-flex color-item align-items-center">
                                 <span className="bg-primary color d-inline-block rounded-circle mr-2"></span> <span className="text-black">Purple (1,075)</span>
                             </Link>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -188,6 +156,7 @@ const ShopPage = () => {
             </div>
             <Collections />
         </>
-    )
-}
+    );
+};
+
 export default ShopPage;

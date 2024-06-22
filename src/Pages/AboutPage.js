@@ -18,15 +18,16 @@ const AboutPage = () => {
                         <div className="col-md-6">
                             <div className="block-16">
                                 <figure>
-                                    <img src="images/blog_1.jpg" alt="Image placeholder" className="img-fluid rounded" />
-                                    <Link to="/about" className="play-button popup-vimeo"><span className="ion-md-play"></span></Link>
+                                    <img src="images/blog_1.jpg" alt="Company history" className="img-fluid rounded" />
+                                    <Link to="/about" className="play-button popup-vimeo"><span className="ion-md-play" aria-hidden="true"></span></Link>
                                 </figure>
                             </div>
                         </div>
                         <div className="col-md-1"></div>
-                        <div className="col-md-5"> <div className="site-section-heading pt-3 mb-4">
-                            <h2 className="text-black">How We Started</h2>
-                        </div>
+                        <div className="col-md-5">
+                            <div className="site-section-heading pt-3 mb-4">
+                                <h2 className="text-black">How We Started</h2>
+                            </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius repellat, dicta at laboriosam, nemo exercitationem itaque eveniet architecto cumque, deleniti commodi molestias repellendus quos sequi hic fugiat asperiores illum. Atque, in, fuga excepturi corrupti error corporis aliquam unde nostrum quas.</p>
                             <p>Accusantium dolor ratione maiores est deleniti nihil? Dignissimos est, sunt nulla illum autem in, quibusdam cumque recusandae, laudantium minima repellendus.</p>
                         </div>
@@ -45,7 +46,7 @@ const AboutPage = () => {
                             <div className="block-38 text-center">
                                 <div className="block-38-img">
                                     <div className="block-38-header">
-                                        <img src="images/person_1.jpg" alt="Image placeholder" className="mb-4" />
+                                        <img src="images/person_1.jpg" alt="Elizabeth Graham" className="mb-4" />
                                         <h3 className="block-38-heading h4">Elizabeth Graham</h3>
                                         <p className="block-38-subheading">CEO/Co-Founder</p>
                                     </div>
@@ -59,7 +60,7 @@ const AboutPage = () => {
                             <div className="block-38 text-center">
                                 <div className="block-38-img">
                                     <div className="block-38-header">
-                                        <img src="images/person_2.jpg" alt="Image placeholder" className="mb-4" />
+                                        <img src="images/person_2.jpg" alt="Jennifer Greive" className="mb-4" />
                                         <h3 className="block-38-heading h4">Jennifer Greive</h3>
                                         <p className="block-38-subheading">Co-Founder</p>
                                     </div>
@@ -73,7 +74,7 @@ const AboutPage = () => {
                             <div className="block-38 text-center">
                                 <div className="block-38-img">
                                     <div className="block-38-header">
-                                        <img src="images/person_3.jpg" alt="Image placeholder" className="mb-4" />
+                                        <img src="images/person_3.jpg" alt="Patrick Marx" className="mb-4" />
                                         <h3 className="block-38-heading h4">Patrick Marx</h3>
                                         <p className="block-38-subheading">Marketing</p>
                                     </div>
@@ -87,7 +88,7 @@ const AboutPage = () => {
                             <div className="block-38 text-center">
                                 <div className="block-38-img">
                                     <div className="block-38-header">
-                                        <img src="images/person_4.jpg" alt="Image placeholder" className="mb-4" />
+                                        <img src="images/person_4.jpg" alt="Mike Coolbert" className="mb-4" />
                                         <h3 className="block-38-heading h4">Mike Coolbert</h3>
                                         <p className="block-38-subheading">Sales Manager</p>
                                     </div>
@@ -101,7 +102,6 @@ const AboutPage = () => {
                 </div>
             </div>
             <Service />
-
         </>
     )
 }
