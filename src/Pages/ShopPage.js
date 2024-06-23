@@ -1,8 +1,17 @@
 import React from 'react';
-import Collections from '../Components/Collections';
 import { Link } from 'react-router-dom';
+import Collections from '../Components/Collections';
 
 const ShopPage = () => {
+    const products = [
+        { img: 'cloth_1.jpg', title: 'Tank Top', desc: 'Finding perfect t-shirt', price: '$50' },
+        { img: 'shoe_1.jpg', title: 'Corater', desc: 'Finding perfect products', price: '$50' },
+        { img: 'cloth_2.jpg', title: 'Polo Shirt', desc: 'Finding perfect products', price: '$50' },
+        { img: 'cloth_3.jpg', title: 'T-Shirt Mockup', desc: 'Finding perfect products', price: '$50' },
+        { img: 'shoe_1.jpg', title: 'Corater', desc: 'Finding perfect products', price: '$50' },
+        { img: 'cloth_1.jpg', title: 'Tank Top', desc: 'Finding perfect t-shirt', price: '$50' },
+    ];
+
     return (
         <>
             <div className="bg-light py-3">
@@ -47,19 +56,12 @@ const ShopPage = () => {
                         </div>
                     </div>
                     <div className="row mb-5">
-                        {[
-                            { img: 'cloth_1.jpg', title: 'Tank Top', desc: 'Finding perfect t-shirt', price: '$50' },
-                            { img: 'shoe_1.jpg', title: 'Corater', desc: 'Finding perfect products', price: '$50' },
-                            { img: 'cloth_2.jpg', title: 'Polo Shirt', desc: 'Finding perfect products', price: '$50' },
-                            { img: 'cloth_3.jpg', title: 'T-Shirt Mockup', desc: 'Finding perfect products', price: '$50' },
-                            { img: 'shoe_1.jpg', title: 'Corater', desc: 'Finding perfect products', price: '$50' },
-                            { img: 'cloth_1.jpg', title: 'Tank Top', desc: 'Finding perfect t-shirt', price: '$50' },
-                        ].map((item, index) => (
+                        {products.map((item, index) => (
                             <div className="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" key={index}>
                                 <div className="block-4 text-center border">
                                     <figure className="block-4-image">
                                         <Link to="shop-single.html">
-                                            <img src={`images/${item.img}`} alt="Image placeholder" className="img-fluid" />
+                                            <img src={`images/${item.img}`} alt={item.title} className="img-fluid" />
                                         </Link>
                                     </figure>
                                     <div className="block-4-text p-4">
